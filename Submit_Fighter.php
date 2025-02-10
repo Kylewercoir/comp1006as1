@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Fighters</title>
 </head>
-<body>
+<body>]
 <h1>Add Fighters</h1>
-<form action="submit_fighter.php" method="POST">
+<form action="Sbmit_Fighter.php" method="POST"></form>
     <label for="name">Fighter Name:</label>
     <input type="text" id="name" name="name" required><br><br>
     
@@ -15,7 +15,7 @@
     <select name="ranking_id" id="ranking"required>
         <?php
          include 'DB.php';
-         $sql = "SELECT * FROM rankings";
+         $sql = "SELECT * FROM Fighters";
          $result = $conn->query($sql);
          while ($row = $result->fetch_asssssoc()) {
             echo "<option value='" . $row['ranking_id'] . "'>" . $row['ranking_name'] . "<option>";
